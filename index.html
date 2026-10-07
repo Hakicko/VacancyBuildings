@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://service.pdok.nl https://tile.openstreetmap.org; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="origin">
+<title>Eindhoven vacancy map</title>
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="map"></div>
+<div id="legend" class="panel">
+  <h1>Eindhoven vacancy map</h1>
+  <div id="cats"></div>
+  <div class="total">Total: <span id="tot">0</span></div>
+</div>
+<div id="hint" class="panel">Tap the map to place the point</div>
+<div id="bar" class="panel">
+  <button id="add" class="pri">+ Point</button>
+  <button id="gps">Here</button>
+  <button id="exp">Export</button>
+  <button id="imp">Import</button>
+  <input id="file" type="file" accept=".geojson,.json" hidden>
+</div>
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
