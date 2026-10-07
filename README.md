@@ -5,7 +5,20 @@ A small static web app (no backend, no build step) to log vacant or abandoned bu
 - Points are categorised mainly by **occupancy**: vacant (strong signs), probably vacant, occupied, unsure.
 - Each point also has type, visible condition, observed signs, address, notes and survey date.
 - Base maps (switch with the layer button): PDOK/Kadaster map and aerial photos (Dutch open data, no API key) and OpenStreetMap.
-- Export / import as GeoJSON (opens in QGIS).
+- **Paths**: draw a route by tapping vertices (**Path**, then **Finish** or Enter), or record it with GPS while you cycle (**Rec**, then **Stop**). Click a path to name it or delete it. Each finished path is listed separately in the legend (unnamed ones as Path 1, Path 2…) with its length; use the checkbox to hide one and click its name to zoom to it. With more than 5 paths the list collapses into a single group you can expand.
+- **Saving**: every change is autosaved in the browser. **Save** (Ctrl/Cmd+S) also writes a `.geojson` file: the first time you choose where, afterwards it overwrites the same file silently (Chrome/Edge on desktop). **Save as** (Ctrl+Shift+S) picks a new file. Browsers without this feature (Safari, Firefox, most phones) download a copy instead. **Import** merges a saved file back in. The file opens in QGIS.
+
+## Keyboard
+
+| Key | Action |
+| --- | --- |
+| Ctrl/Cmd + S | Save to file (Ctrl/Cmd + Shift + S: save as) |
+| Ctrl/Cmd + Z | Undo (while drawing a path: remove the last vertex) |
+| Ctrl/Cmd + Y or Ctrl/Cmd + Shift + Z | Redo |
+| Delete / Backspace | Delete the selected point or path (click it first) |
+| Enter / Esc | Finish / cancel the path being drawn |
+
+Undo and redo also have buttons for the phone. Shortcuts are ignored while you type in a form field.
 
 ## Run locally
 

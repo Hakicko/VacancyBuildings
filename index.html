@@ -15,12 +15,18 @@
   <h1>Eindhoven vacancy map</h1>
   <div id="cats"></div>
   <div class="total">Total: <span id="tot">0</span></div>
+  <div class="total" id="status"></div>
 </div>
 <div id="hint" class="panel">Tap the map to place the point</div>
 <div id="bar" class="panel">
+  <button id="undo" title="Undo (Ctrl+Z)">&#8630;</button>
+  <button id="redo" title="Redo (Ctrl+Y)">&#8631;</button>
   <button id="add" class="pri">+ Point</button>
   <button id="gps">Here</button>
-  <button id="exp">Export</button>
+  <button id="pbtn">Path</button>
+  <button id="rec">Rec</button>
+  <button id="sv" class="pri" title="Save (Ctrl+S)">Save</button>
+  <button id="exp" title="Save as (Ctrl+Shift+S)">Save as</button>
   <button id="imp">Import</button>
   <input id="file" type="file" accept=".geojson,.json" hidden>
 </div>
